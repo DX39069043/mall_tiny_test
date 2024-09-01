@@ -3,7 +3,7 @@ import pytest
 
 from utils import yaml_handler
 
-
+# 连接数据库
 @pytest.fixture()
 def db_connection():
 
@@ -19,6 +19,7 @@ def db_connection():
         database=dbconfig["database"]
     )
     return connection
+
 
 # 关闭数据库连接
 @pytest.fixture()
