@@ -34,5 +34,5 @@ def test_login_param(case,get_evn):
     if "message" in r.json():
         assert r.json()["message"] == case["预期结果"]
     else:
-        r.json()["error"] == case["预期结果"]
+        assert r.json()["error"] == case["预期结果"]
 
