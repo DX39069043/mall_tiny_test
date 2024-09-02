@@ -15,7 +15,8 @@ print(login_data)
 def test_login(case):
 
     host = "http://localhost:8080"
-    path = "/admin/login"
+    # path = "/admin/login"
+    path = case["URL"]
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
         "Content_Type": "application/json"

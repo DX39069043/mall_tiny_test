@@ -6,7 +6,7 @@
    前置条件: 登陆功能正常
    预期结果: 操作成功
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
@@ -19,7 +19,7 @@
    前置条件: 登陆功能正常
    预期结果: 用户名或密码错误
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: abcde1234
@@ -32,7 +32,7 @@
    前置条件: 登陆功能正常
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: abcde1234#abcde1234#
@@ -45,7 +45,7 @@
    前置条件: 登陆功能正常
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: $
@@ -58,7 +58,7 @@
    前置条件: 登陆功能正常
    预期结果: username不能为空
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username:
@@ -71,7 +71,7 @@
    前置条件: 登陆功能正常
    预期结果: username用户名长度不能超过20
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: abcde12345abcde123450
@@ -84,7 +84,7 @@
    前置条件: 登陆功能正常
    预期结果: password密码只能包含数字或字母
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
@@ -97,7 +97,7 @@
    前置条件: 登陆功能正常
    预期结果: password密码只能包含数字或字母
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
@@ -110,7 +110,7 @@
    前置条件: 登陆功能正常
    预期结果: password不能为空
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
@@ -123,7 +123,7 @@
    前置条件: 登陆功能正常
    预期结果: password不能为空
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
@@ -136,7 +136,7 @@
    前置条件: 登陆功能正常
    预期结果: password密码长度不能超过20
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
@@ -149,7 +149,7 @@
    前置条件: 登陆功能正常
    预期结果: 用户名或密码错误
    请求方法: POST
-   URL: /admin/register
+   URL: /admin/login
    请求头: Content-Type:application/json
    请求体:
       username: admin
