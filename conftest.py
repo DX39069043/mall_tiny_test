@@ -32,3 +32,10 @@ def db_connection():
 def db_close(connection):
     connection.cursor.close()
     connection.close()
+
+# 提取令牌token
+@pytest.fixture(scope="session")
+def get_token():
+    yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/token.yaml")
+    token = yamlhandler.read_yaml()
+    return token
