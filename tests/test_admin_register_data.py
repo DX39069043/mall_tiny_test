@@ -12,14 +12,11 @@ print(login_data)
 
 
 @pytest.mark.parametrize("case",login_data)
-def test_login(case):
+def test_login(case,get_evn):
 
-    host = "http://localhost:8080"
+    host = get_evn["host"]
     # path = "/admin/register"
     path = case["URL"]
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-        "Content_Type": "application/json"
-    }
+    headers = get_evn["headers"]
     r = requests.request("POST", url=host + path, headers=headers, json=case["请求体"])
     assert r.json()["message"] == case["预期结果"]
