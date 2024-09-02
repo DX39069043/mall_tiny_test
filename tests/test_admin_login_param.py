@@ -1,4 +1,4 @@
-# 登陆并获取token
+#使用不同的参数，测试登陆接口
 import pytest
 import requests
 

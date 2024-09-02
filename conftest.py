@@ -8,7 +8,7 @@ from utils import yaml_handler
 def db_connection():
 
     # 利用工具类读取数据库参数
-    yamlhandler = yaml_handler.YamlHandler("E:\code\python\mall_tiny_test\config\database_config.yaml")
+    yamlhandler = yaml_handler.YamlHandler("/config/database.yaml")
     dbconfig = yamlhandler.read_yaml()
 
     # 连接到数据库

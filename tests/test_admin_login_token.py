@@ -1,4 +1,4 @@
-#根据不同的参数，测试登陆接口
+# 登陆并获取token
 
 import requests
 
