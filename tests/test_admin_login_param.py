@@ -4,7 +4,7 @@ import requests
 
 from utils import yaml_handler
 
-yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/login_data.yaml")
+yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/login_param.yaml")
 
 login_data = yamlhandler.read_yaml()
 print(login_data)
@@ -21,4 +21,9 @@ def test_login(case):
         "Content_Type": "application/json"
     }
     r = requests.request("POST", url=host + path, headers=headers, json=case["请求体"])
-    assert case["预期结果"] == r.json()["message"]
+    if "message" in r.json():
+        assert r.json()["message"] == case["预期结果"]
+    else:
+        r.json()["error"] == case["预期结果"]
+
+
