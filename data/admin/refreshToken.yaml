@@ -1,0 +1,60 @@
+-
+   用例编号: refreshToken_data_0
+   用例标题: token正确未过期且最近未刷新
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: 操作成功
+   请求方法: GET
+   URL: /admin/refreshToken
+   请求头:
+      Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE3MjU0NTgxODcxMDgsImV4cCI6MTcyNjA2Mjk4N30.H2E8tDmcajNC6W_SZnrs1uOTQ8a7JYypap-Ceosos-Kup5oLqimJ6JOnPCp_X0Gcf2WraumVHpmrvjqxvHHnPA
+   请求体:
+-
+   用例编号: refreshToken_data_1
+   用例标题: token不正确
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: token已经过期
+   请求方法: GET
+   URL: /admin/refreshToken
+   请求头:
+      Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE3MjU0NTgxODcxMDgsImV4cCI6MTcyNjA2Mjk4N30.H2E8tDmcajNC6W_SZnrs1uOTQ8a7JYypap-Ceosos-Kup5oLqimJ6JOnPCp_X0Gcf2WraumVHpmrvjqxvHHnPA
+   请求体:
+-
+   用例编号: refreshToken_data_2
+   用例标题: token正确已过期
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: token已经过期
+   请求方法: GET
+   URL: /admin/refreshToken
+   请求头:
+      Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE3MjU0NTgxODcxMDgsImV4cCI6MTcyNjA2Mjk4N30.H2E8tDmcajNC6W_SZnrs1uOTQ8a7JYypap-Ceosos-Kup5oLqimJ6JOnPCp_X0Gcf2WraumVHpmrvjqxvHHnPA
+   请求体:
+-
+   用例编号: refreshToken_data_3
+   用例标题: token正确未过期但最近刚刷新
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: 操作成功
+   请求方法: GET
+   URL: /admin/refreshToken
+   请求头:
+      Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE3MjU0NTgxODcxMDgsImV4cCI6MTcyNjA2Mjk4N30.H2E8tDmcajNC6W_SZnrs1uOTQ8a7JYypap-Ceosos-Kup5oLqimJ6JOnPCp_X0Gcf2WraumVHpmrvjqxvHHnPA
+   请求体:
+-
+   用例编号: refreshToken_data_4
+   用例标题: 未携带token
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: token已经过期
+   请求方法: GET
+   URL: /admin/refreshToken
+   请求头:
+      Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE3MjU0NTgxODcxMDgsImV4cCI6MTcyNjA2Mjk4N30.H2E8tDmcajNC6W_SZnrs1uOTQ8a7JYypap-Ceosos-Kup5oLqimJ6JOnPCp_X0Gcf2WraumVHpmrvjqxvHHnPA
+   请求体:
