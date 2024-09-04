@@ -7,7 +7,8 @@
    预期结果: 操作成功
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: macro123
@@ -20,7 +21,8 @@
    预期结果: 操作成功
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: macro123
@@ -34,7 +36,8 @@
    预期结果: password不能为空
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
 -
@@ -46,7 +49,8 @@
    预期结果: Bad Request
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
 
 -
@@ -58,7 +62,8 @@
    预期结果: username不能为空
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       id: admin
       password: macro123

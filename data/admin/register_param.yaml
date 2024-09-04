@@ -7,7 +7,8 @@
 #   预期结果: 操作成功
 #   请求方法: POST
 #   URL: /admin/register
-#   请求头: Content-Type:application/json
+#   请求头:
+#      Content-Type: application/json
 #   请求体:
 #     username: usertest0
 #     password: macro123
@@ -22,7 +23,8 @@
 #   预期结果: 操作成功
 #   请求方法: POST
 #   URL: /admin/register
-#   请求头: Content-Type:application/json
+#   请求头:
+#      Content-Type: application/json
 #   请求体:
 #     username: usertest1
 #     id: 123
@@ -38,7 +40,8 @@
    预期结果: password密码不能为空
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
      username: usertest2
      email: 123@qq.com
@@ -53,7 +56,8 @@
    预期结果: Bad Request
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
 
 -
@@ -65,7 +69,8 @@
    预期结果: username用户名不能为空
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
      id: usertest4
      password: 1324

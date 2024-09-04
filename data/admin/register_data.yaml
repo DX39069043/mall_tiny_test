@@ -23,7 +23,8 @@
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser1#
       password: macro123
@@ -38,7 +39,8 @@
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser2#abcde1234#
       password: macro123
@@ -53,7 +55,8 @@
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: $
       password: macro123
@@ -68,7 +71,8 @@
    预期结果: username用户名不能为空
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username:
       password: macro123
@@ -83,7 +87,8 @@
    预期结果: username用户名长度不能超过20
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser5abcde1234508
       password: macro123
@@ -98,7 +103,8 @@
    预期结果: password密码只能包含数字或字母
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser6
       password: abcde1234#
@@ -113,7 +119,8 @@
    预期结果: password密码只能包含数字或字母
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser7
       password: abcde1234#abcde1234#
@@ -128,7 +135,8 @@
    预期结果: password密码不能为空
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser8
       password: #
@@ -143,7 +151,8 @@
    预期结果: password密码不能为空
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser9
       password:
@@ -158,7 +167,8 @@
    预期结果: password密码长度不能超过20
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser10
       password: abcde12345abcde123450
@@ -173,7 +183,8 @@
    预期结果: email请输入正确的邮箱
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: testUser11
       password: abc123
@@ -188,7 +199,8 @@
    预期结果: 该用户名已被注册
    请求方法: POST
    URL: /admin/register
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: macro123

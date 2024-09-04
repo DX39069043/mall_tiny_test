@@ -14,10 +14,11 @@ login_data = yamlhandler_data.read_yaml()
 def test_login_data(case, get_evn):
 
     host = get_evn["host"]
-    # path = "/admin/login"
+    headers = {**get_evn["headers"],**case["请求头"]}
     path = case["URL"]
-    headers = get_evn["headers"]
-    r = requests.request("POST", url=host + path, headers=headers, json=case["请求体"])
+    method=case["请求方法"]
+
+    r = requests.request(method, url=host + path, headers=headers, json=case["请求体"])
     assert case["预期结果"] == r.json()["message"]
     allure.dynamic.title(case["用例编号"])
 
@@ -33,10 +34,11 @@ login_param = yamlhandler_param.read_yaml()
 def test_login_param(case,get_evn):
 
     host = get_evn["host"]
-    # path = "/admin/login"
+    headers = {**get_evn["headers"],**case["请求头"]}
+    method=case["请求方法"]
     path = case["URL"]
-    headers = get_evn["headers"]
-    r = requests.request("POST", url=host + path, headers=headers, json=case["请求体"])
+
+    r = requests.request(method, url=host + path, headers=headers, json=case["请求体"])
     if "message" in r.json():
         assert r.json()["message"] == case["预期结果"]
     else:

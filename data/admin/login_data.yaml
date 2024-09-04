@@ -7,7 +7,8 @@
    预期结果: 操作成功
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: macro123
@@ -20,7 +21,8 @@
    预期结果: 用户名或密码错误
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: abcde1234
       password: macro123
@@ -33,7 +35,8 @@
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: abcde1234#abcde1234#
       password: macro123
@@ -46,7 +49,8 @@
    预期结果: username用户名只能包含数字或字母
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: $
       password: macro123
@@ -59,7 +63,8 @@
    预期结果: username不能为空
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username:
       password: macro123
@@ -72,7 +77,8 @@
    预期结果: username用户名长度不能超过20
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: abcde12345abcde123450
       password: macro123
@@ -85,7 +91,8 @@
    预期结果: password密码只能包含数字或字母
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: abcde1234#
@@ -98,7 +105,8 @@
    预期结果: password密码只能包含数字或字母
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: abcde1234#abcde1234#
@@ -111,7 +119,8 @@
    预期结果: password不能为空
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: #
@@ -124,7 +133,8 @@
    预期结果: password不能为空
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password:
@@ -137,7 +147,8 @@
    预期结果: password密码长度不能超过20
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: abcde12345abcde123450
@@ -150,7 +161,8 @@
    预期结果: 用户名或密码错误
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin
       password: abc123
@@ -163,7 +175,8 @@
    预期结果: 用户名或密码错误
    请求方法: POST
    URL: /admin/login
-   请求头: Content-Type:application/json
+   请求头:
+      Content-Type: application/json
    请求体:
       username: admin123
       password: macro123
