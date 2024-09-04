@@ -1,10 +1,11 @@
 # 登陆并获取token
-
+import allure
 import requests
 
 from utils.yaml_handler import YamlHandler
 
-
+@allure.feature("admin:登录后返回token")
+@allure.link("/admin/login")
 def test_admin_login_token(get_evn):
     host = get_evn["host"]
     path = "/admin/login"

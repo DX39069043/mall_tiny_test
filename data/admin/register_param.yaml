@@ -1,34 +1,34 @@
--
-   用例编号: register_param_0
-   用例标题: 正确参数
-   模块: 注册
-   优先级: P0
-   前置条件: 登陆功能正常
-   预期结果: 操作成功
-   请求方法: POST
-   URL: /admin/register
-   请求头: Content-Type:application/json
-   请求体:
-     username: usertest0
-     password: macro123
-     email: 123@qq.com
-     nickName: register_param_0
--
-   用例编号: register_param_1
-   用例标题: 多参数
-   模块: 注册
-   优先级: P0
-   前置条件: 登陆功能正常
-   预期结果: 操作成功
-   请求方法: POST
-   URL: /admin/register
-   请求头: Content-Type:application/json
-   请求体:
-     username: usertest1
-     id: 123
-     password: 123456
-     email: 123@qq.com
-     nickName: register_param_1
+#-
+#   用例编号: register_param_0
+#   用例标题: 正确参数
+#   模块: 注册
+#   优先级: P0
+#   前置条件: 登陆功能正常
+#   预期结果: 操作成功
+#   请求方法: POST
+#   URL: /admin/register
+#   请求头: Content-Type:application/json
+#   请求体:
+#     username: usertest0
+#     password: macro123
+#     email: 123@qq.com
+#     nickName: register_param_0
+#-
+#   用例编号: register_param_1
+#   用例标题: 多参数
+#   模块: 注册
+#   优先级: P0
+#   前置条件: 登陆功能正常
+#   预期结果: 操作成功
+#   请求方法: POST
+#   URL: /admin/register
+#   请求头: Content-Type:application/json
+#   请求体:
+#     username: usertest1
+#     id: 123
+#     password: 123456
+#     email: 123@qq.com
+#     nickName: register_param_1
 -
    用例编号: register_param_2
    用例标题: 少参数

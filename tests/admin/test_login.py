@@ -1,4 +1,5 @@
 # 登录
+import allure
 import pytest
 import requests
 
@@ -7,6 +8,8 @@ from utils import yaml_handler
 yamlhandler_data = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/login_data.yaml")
 login_data = yamlhandler_data.read_yaml()
 
+@allure.feature("admin:用户登录")
+@allure.link("/admin/login")
 @pytest.mark.parametrize("case",login_data)
 def test_login_data(case, get_evn):
 
@@ -16,12 +19,16 @@ def test_login_data(case, get_evn):
     headers = get_evn["headers"]
     r = requests.request("POST", url=host + path, headers=headers, json=case["请求体"])
     assert case["预期结果"] == r.json()["message"]
+    allure.dynamic.title(case["用例编号"])
 
 
 
 yamlhandler_param = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/login_param.yaml")
 login_param = yamlhandler_param.read_yaml()
 
+
+@allure.feature("admin:用户登录")
+@allure.link("/admin/login")
 @pytest.mark.parametrize("case", login_param)
 def test_login_param(case,get_evn):
 
@@ -34,4 +41,5 @@ def test_login_param(case,get_evn):
         assert r.json()["message"] == case["预期结果"]
     else:
         assert r.json()["error"] == case["预期结果"]
+    allure.dynamic.title(case["用例编号"])
 
