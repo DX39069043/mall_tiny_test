@@ -2,6 +2,8 @@ import pymysql
 import pytest
 
 from utils import yaml_handler
+from utils.yaml_handler import YamlHandler
+
 
 @pytest.fixture(scope="session")
 def get_evn():
@@ -36,6 +38,7 @@ def db_close(connection):
 # 提取令牌token
 @pytest.fixture(scope="session")
 def get_token():
-    yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/token.yaml")
-    token = yamlhandler.read_yaml()
+    yamlhander_token = YamlHandler("E:/code/python/mall_tiny_test/data/admin/token.yaml")
+    raw_token = yamlhander_token.read_yaml()
+    token = raw_token["tokenHead"] + raw_token["token"]
     return token
