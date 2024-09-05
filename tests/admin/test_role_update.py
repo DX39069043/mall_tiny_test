@@ -29,6 +29,7 @@ def test_role_update_data(case, get_evn, get_root_token, get_token):
         assert r.json()["error"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
 
+
 yamlhander_param=YamlHandler("E:/code/python/mall_tiny_test/data/admin/role_update_param.yaml")
 role_update_param=yamlhander_param.read_yaml()
 

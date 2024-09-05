@@ -1,0 +1,33 @@
+-
+   用例编号: role_0
+   用例标题: 少参
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: Bad Request
+   请求方法: GET
+   URL: /admin/role
+   请求头:
+   请求体:
+-
+   用例编号: role_1
+   用例标题: 错参(参数不是数字)
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: Bad Request
+   请求方法: GET
+   URL: /admin/role/abc
+   请求头:
+   请求体:
+-
+   用例编号: role_2
+   用例标题: 多参
+   模块: admin
+   优先级: P2
+   前置条件: 登陆功能正常
+   预期结果: Bad Request
+   请求方法: GET
+   URL: /admin/role
+   请求头:
+   请求体:
