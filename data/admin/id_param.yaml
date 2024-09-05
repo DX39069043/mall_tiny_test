@@ -1,33 +1,33 @@
 -
-   用例编号: role_param_0
+   用例编号: id_param_0
    用例标题: 少参
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
-   预期结果: Bad Request
+   预期结果: Not Found
    请求方法: GET
-   URL: /admin/role
-   请求头:
-   请求体:
+   URL: /admin/
+   请求头: ""
+   请求体: ""
 -
-   用例编号: role_param_1
-   用例标题: 错参(参数不是数字)
+   用例编号: id_param_1
+   用例标题: 错参
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
    预期结果: Bad Request
    请求方法: GET
-   URL: /admin/role/abc
-   请求头:
-   请求体:
+   URL: /admin/abc
+   请求头: ""
+   请求体: ""
 -
-   用例编号: role_param_2
+   用例编号: id_param_2
    用例标题: 多参
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
-   预期结果: Bad Request
+   预期结果: Not Found
    请求方法: GET
-   URL: /admin/role
+   URL: /admin/
    请求头:
    请求体:
