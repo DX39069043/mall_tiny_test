@@ -42,3 +42,25 @@
    URL: /admin/role/update?adminId=10&roleIds=1,2
    请求头:
    请求体:
+-
+   用例编号: role_update_4
+   用例标题: adminId为空
+   模块: admin
+   优先级: P3
+   前置条件: 登陆功能正常
+   预期结果: "Bad Request"
+   请求方法: POST
+   URL: /admin/role/update?adminId&roleIds=1,2
+   请求头:
+   请求体:
+-
+   用例编号: role_update_5
+   用例标题: roleIds为空
+   模块: admin
+   优先级: P3
+   前置条件: 登陆功能正常
+   预期结果: "操作成功"
+   请求方法: POST
+   URL: /admin/role/update?adminId=10&roleIds
+   请求头:
+   请求体:
