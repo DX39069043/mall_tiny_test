@@ -12,7 +12,7 @@
    请求体:
 -
    用例编号: refreshToken_data_1
-   用例标题: token不正确
+   用例标题: token校验不通过
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
@@ -24,7 +24,7 @@
    请求体:
 -
    用例编号: refreshToken_data_2
-   用例标题: token正确已过期
+   用例标题: token已过期
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
@@ -36,7 +36,7 @@
    请求体:
 -
    用例编号: refreshToken_data_3
-   用例标题: token正确未过期但最近刚刷新
+   用例标题: 最近已经刷新过
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常

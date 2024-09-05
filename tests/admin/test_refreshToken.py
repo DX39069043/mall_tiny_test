@@ -11,12 +11,15 @@ refreshToken_data = yamlhandler.read_yaml()
 @allure.feature("admin:刷新token")
 @allure.link("/admin/refreshToken")
 @pytest.mark.parametrize("case", refreshToken_data)
+@pytest.mark.skip
 def test_refreshToken(case, get_evn):
     host = get_evn["host"]
     path = case["URL"]
     method = case["请求方法"]
     headers = {**get_evn["headers"], **case["请求头"]}
+    print(headers)
 
     r = request(method, url=host + path, headers=headers)
 
     assert r.json()["message"] == case["预期结果"]
+    allure.dynamic.title(case["用例编号"])

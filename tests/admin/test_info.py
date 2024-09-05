@@ -13,10 +13,10 @@ info = yamlhander.read_yaml()
 @allure.feature("admin:获取当前登录用户的信息")
 @allure.link("/admin/info")
 @pytest.mark.parametrize("case", info)
-def test_info(case, get_evn,get_token):
+def test_info(case, get_evn, get_root_token):
     host = get_evn["host"]
     headers = get_evn["headers"]
-    headers["Authorization"] = get_token
+    headers["Authorization"] = get_root_token
     path = case["URL"]
     method=case["请求方法"]
 
