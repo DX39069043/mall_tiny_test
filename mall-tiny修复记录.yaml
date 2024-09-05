@@ -1,0 +1,7 @@
+/admin/role/update: 
+  - 添加不存在的role角色没有报错提示
+  - 添加不存在的admin角色没有报错提示
+
+/admin/role/{adminId}: 
+  - 查询不存在的用户没有报错提示
+  - 用户没有角色时没有报错提示
