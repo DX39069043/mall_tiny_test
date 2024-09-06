@@ -1,0 +1,96 @@
+data:
+  - 用例编号: list_data_0
+    用例标题: 格式正确
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum=1&pageSize=5
+    请求头:
+    请求体:
+
+  - 用例编号: list_data_1
+    用例标题: 关键字为空
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword&pageNum=1&pageSize=5
+    请求头:
+    请求体:
+
+  - 用例编号: list_data_2
+    用例标题: 页数为空
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum&pageSize=5
+    请求头:
+    请求体:
+
+  - 用例编号: list_data_3
+    用例标题: 每页个数为空
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum=1&pageSize
+    请求头:
+    请求体:
+  - 用例编号: list_data_4
+    用例标题: 没有相关权限
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 没有相关权限
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum=1&pageSize=5
+    请求头:
+    请求体:
+
+param:
+  - 用例编号: list_param_0
+    用例标题: 多参
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum=1&pageSize=5&age=5
+    请求头: ""
+    请求体: ""
+  - 用例编号: list_param_1
+    用例标题: 少参
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum=1
+    请求头: ""
+    请求体: ""
+  - 用例编号: list_param_2
+    用例标题: 错参
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: GET
+    URL: /admin/list?keyword=admin&pageNum=1&age=5
+    请求头: ""
+    请求体: ""
+  - 用例编号: list_param_3
+    用例标题: 空参
+    模块: admin
+    优先级: P1
+    前置条件: 登陆功能正常
+    预期结果: Bad Request
+    请求方法: GET
+    URL: /admin/list
+    请求头: ""
+    请求体: ""
