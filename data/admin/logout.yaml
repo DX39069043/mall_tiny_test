@@ -4,7 +4,10 @@
    模块: admin
    优先级: P1
    前置条件: 登陆功能正常
-   预期结果: "操作成功"
+   预期结果:
+      code: 200
+      message: 操作成功
+      data: null
    请求方法: POST
    URL: /admin/logout
    请求头:

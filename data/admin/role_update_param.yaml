@@ -4,7 +4,7 @@
    模块: admin
    优先级: P1
    前置条件: 登陆功能正常
-   预期结果: "Bad Request"
+   预期结果: Bad Request
    请求方法: POST
    URL: /admin/role/update?adminId&roleIds=1,2
    请求头:
@@ -15,7 +15,7 @@
    模块: admin
    优先级: P1
    前置条件: 登陆功能正常
-   预期结果: "Bad Request"
+   预期结果: Bad Request
    请求方法: POST
    URL: /admin/role/update?roleIds=1,2
    请求头:
@@ -26,7 +26,7 @@
    模块: admin
    优先级: P1
    前置条件: 登陆功能正常
-   预期结果: "Bad Request"
+   预期结果: Bad Request
    请求方法: POST
    URL: /admin/role/update?adminId
    请求头:
@@ -37,7 +37,7 @@
    模块: admin
    优先级: P1
    前置条件: 登陆功能正常
-   预期结果: "Bad Request"
+   预期结果: Bad Request
    请求方法: POST
    URL: /admin/role/update?adminId&roleIds=1,2&id=10
    请求头:
@@ -48,7 +48,7 @@
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
-   预期结果: "Bad Request"
+   预期结果: Bad Request
    请求方法: POST
    URL: /admin/role/update?AdminId&roleIds=1,2
    请求头:

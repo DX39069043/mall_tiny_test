@@ -4,7 +4,10 @@
    模块: admin
    优先级: P1
    前置条件: 登陆功能正常
-   预期结果: "操作成功"
+   预期结果:
+      code: 200
+      message: 操作成功
+      data: 2
    请求方法: POST
    URL: /admin/role/update?adminId=10&roleIds=1,2
    请求头:
@@ -15,7 +18,10 @@
    模块: admin
    优先级: P2
    前置条件: 登陆功能正常
-   预期结果: "该用户不存在"
+   预期结果:
+      code: 500
+      message: 该用户不存在
+      data:
    请求方法: POST
    URL: /admin/role/update?adminId=100000&roleIds=1,2
    请求头:
@@ -26,7 +32,10 @@
    模块: admin
    优先级: P3
    前置条件: 登陆功能正常
-   预期结果: "参数列表中有错误的roleId"
+   预期结果:
+      code: 500
+      message: 参数列表中有错误的roleId
+      data:
    请求方法: POST
    URL: /admin/role/update?adminId=10&roleIds=100
    请求头:
@@ -37,7 +46,10 @@
    模块: admin
    优先级: P3
    前置条件: 登陆功能正常
-   预期结果: "没有相关权限"
+   预期结果:
+      code: 403
+      message: 没有相关权限
+      data: 抱歉，您没有访问权限
    请求方法: POST
    URL: /admin/role/update?adminId=10&roleIds=1,2
    请求头:
@@ -48,7 +60,7 @@
    模块: admin
    优先级: P3
    前置条件: 登陆功能正常
-   预期结果: "Bad Request"
+   预期结果: Bad Request
    请求方法: POST
    URL: /admin/role/update?adminId&roleIds=1,2
    请求头:
@@ -59,7 +71,10 @@
    模块: admin
    优先级: P3
    前置条件: 登陆功能正常
-   预期结果: "操作成功"
+   预期结果:
+      code: 200
+      message: 操作成功
+      data: 0
    请求方法: POST
    URL: /admin/role/update?adminId=10&roleIds
    请求头:

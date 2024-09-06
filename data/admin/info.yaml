@@ -229,7 +229,6 @@
            icon: ums-resource
            hidden: 0
        username: admin
-
    请求方法: GET
    URL: /admin/info
    请求头:

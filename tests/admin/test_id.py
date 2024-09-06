@@ -24,7 +24,7 @@ def test_id_data(case, get_evn, get_root_token, get_token):
 
     r = request(method, url=host + path, headers=headers)
     if "message" in r.json():
-        assert r.json()["message"] == case["预期结果"]
+        assert r.json() == case["预期结果"]
     else:
         assert r.json()["error"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
@@ -49,7 +49,7 @@ def test_id_param(case,get_evn,get_token,get_root_token):
 
     r = request(method, url=host + path, headers=headers)
     if "message" in r.json():
-        assert r.json()["message"] == case["预期结果"]
+        assert r.json() == case["预期结果"]
     else:
         assert r.json()["error"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
