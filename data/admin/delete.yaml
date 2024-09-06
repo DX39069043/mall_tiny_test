@@ -1,0 +1,73 @@
+data:
+  - 用例编号: delete_data_0
+    用例标题: 格式正确
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete/10
+    请求头: ""
+    请求体: ""
+  - 用例编号: delete_data_1
+    用例标题: 查询用户不存在
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete/100
+    请求头: ""
+    请求体: ""
+  - 用例编号: delete_data_2
+    用例标题: 参数为空
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete
+    请求头: ""
+    请求体: ""
+  - 用例编号: delete_data_3
+    用例标题: 没有相关权限
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete/10
+    请求头: ""
+    请求体: ""
+
+param:
+  - 用例编号: delete_param_0
+    用例标题: 少参
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete
+    请求头: ""
+    请求体: ""
+  - 用例编号: delete_param_1
+    用例标题: 错参
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete/abc
+    请求头: ""
+    请求体: ""
+  - 用例编号: delete_param_2
+    用例标题: 多参
+    模块: admin
+    优先级: P2
+    前置条件: 登陆功能正常
+    预期结果: ""
+    请求方法: GET
+    URL: /admin/delete/10/20
+    请求头: ""
+    请求体: ""
