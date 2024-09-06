@@ -5,8 +5,10 @@ import requests
 
 from utils import yaml_handler
 
-yamlhandler_data = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/login_data.yaml")
-login_data = yamlhandler_data.read_yaml()
+yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/login.yaml")
+
+login_data = yamlhandler.read_yaml()["data"]
+login_param=yamlhandler.read_yaml()["param"]
 
 @allure.feature("admin:用户登录")
 @allure.link("/admin/login")
@@ -21,11 +23,6 @@ def test_login_data(case, get_evn):
     r = requests.request(method, url=host + path, headers=headers, json=case["请求体"])
     assert case["预期结果"] == r.json()["message"]
     allure.dynamic.title(case["用例编号"])
-
-
-
-yamlhandler_param = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/login_param.yaml")
-login_param = yamlhandler_param.read_yaml()
 
 
 @allure.feature("admin:用户登录")

@@ -5,8 +5,10 @@ from requests import request
 from conftest import get_token
 from utils.yaml_handler import YamlHandler
 
-yamlhander_data = YamlHandler("E:/code/python/mall_tiny_test/data/admin/id_data.yaml")
-id_data = yamlhander_data.read_yaml()
+yamlhander = YamlHandler("E:/code/python/mall_tiny_test/data/admin/id.yaml")
+id_data = yamlhander.read_yaml()["data"]
+id_param = yamlhander.read_yaml()["param"]
+
 
 @allure.link("/admin/{id}")
 @allure.feature("admin:获取指定用户信息")
@@ -29,9 +31,6 @@ def test_id_data(case, get_evn, get_root_token, get_token):
         assert r.json()["error"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
 
-
-yamlhander_param=YamlHandler("E:/code/python/mall_tiny_test/data/admin/id_param.yaml")
-id_param=yamlhander_param.read_yaml()
 
 @allure.link("/admin/{id}")
 @allure.feature("admin:获取指定用户信息")

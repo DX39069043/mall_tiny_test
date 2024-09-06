@@ -5,8 +5,9 @@ import requests
 
 from utils import yaml_handler
 
-yamlhandler_data = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/register_data.yaml")
-register_data = yamlhandler_data.read_yaml()
+yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/register.yaml")
+register_data = yamlhandler.read_yaml()["data"]
+register_param = yamlhandler.read_yaml()["param"]
 
 
 @allure.feature("admin:用户注册")
@@ -22,10 +23,6 @@ def test_register_data(case, get_evn):
     r = requests.request(method, url=host + path, headers=headers, json=case["请求体"])
     assert r.json()["message"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
-
-
-yamlhandler_param = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/register_param.yaml")
-register_param = yamlhandler_param.read_yaml()
 
 
 @allure.feature("admin:用户注册")

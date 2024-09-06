@@ -1,0 +1,252 @@
+data:
+    -
+       用例编号: login_data_0
+       用例标题: 格式正确且匹配
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: 操作成功
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password: macro123
+    -
+       用例编号: login_data_1
+       用例标题: 用户名：含有非字母数字；10位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: 用户名或密码错误
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: abcde1234
+          password: macro123
+    -
+       用例编号: login_data_2
+       用例标题: 用户名：含有非字母数字；20位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: username用户名只能包含数字或字母
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: abcde1234#abcde1234#
+          password: macro123
+    -
+       用例编号: login_data_3
+       用例标题: 用户名：含有非字母数字；1位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: username用户名只能包含数字或字母
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: $
+          password: macro123
+    -
+       用例编号: login_data_4
+       用例标题: 用户名：空
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: username不能为空
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username:
+          password: macro123
+    -
+       用例编号: login_data_5
+       用例标题: 用户名：21位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: username用户名长度不能超过20
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: abcde12345abcde123450
+          password: macro123
+    -
+       用例编号: login_data_6
+       用例标题: 密码：含有非字母数字；10位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: password密码只能包含数字或字母
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password: abcde1234#
+    -
+       用例编号: login_data_7
+       用例标题: 密码：含有非字母数字；20位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: password密码只能包含数字或字母
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password: abcde1234#abcde1234#
+    -
+       用例编号: login_data_8
+       用例标题: 密码：含有非字母数字；1位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: password不能为空
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password: #
+    -
+       用例编号: login_data_9
+       用例标题: 密码：空
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: password不能为空
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password:
+    -
+       用例编号: login_data_10
+       用例标题: 密码：21位
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: password密码长度不能超过20
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password: abcde12345abcde123450
+    -
+       用例编号: login_data_11
+       用例标题: 用户名与密码不匹配
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: 用户名或密码错误
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin
+          password: abc123
+    -
+       用例编号: login_data_12
+       用例标题: 该用户名未注册
+       模块: admin
+       优先级: P0
+       前置条件: 登陆功能正常
+       预期结果: 用户名或密码错误
+       请求方法: POST
+       URL: /admin/login
+       请求头:
+          Content-Type: application/json
+       请求体:
+          username: admin123
+          password: macro123
+
+param:
+  - 用例编号: login_param_0
+    用例标题: 正确参数
+    模块: admin
+    优先级: P0
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: POST
+    URL: /admin/login
+    请求头:
+      Content-Type: application/json
+    请求体:
+      username: admin
+      password: macro123
+
+  - 用例编号: login_param_1
+    用例标题: 多参数
+    模块: admin
+    优先级: P0
+    前置条件: 登陆功能正常
+    预期结果: 操作成功
+    请求方法: POST
+    URL: /admin/login
+    请求头:
+      Content-Type: application/json
+    请求体:
+      username: admin
+      password: macro123
+      id: 100
+
+  - 用例编号: login_param_2
+    用例标题: 少参数
+    模块: admin
+    优先级: P0
+    前置条件: 登陆功能正常
+    预期结果: password不能为空
+    请求方法: POST
+    URL: /admin/login
+    请求头:
+      Content-Type: application/json
+    请求体:
+      username: admin
+
+  - 用例编号: login_param_3
+    用例标题: 无参数
+    模块: admin
+    优先级: P0
+    前置条件: 登陆功能正常
+    预期结果: Bad Request
+    请求方法: POST
+    URL: /admin/login
+    请求头:
+      Content-Type: application/json
+    请求体:
+
+  - 用例编号: login_param_4
+    用例标题: 错误参数
+    模块: admin
+    优先级: P0
+    前置条件: 登陆功能正常
+    预期结果: username不能为空
+    请求方法: POST
+    URL: /admin/login
+    请求头:
+      Content-Type: application/json
+    请求体:
+      id: admin
+      password: macro123

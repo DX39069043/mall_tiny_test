@@ -3,10 +3,12 @@ import pytest
 from requests import request
 
 from conftest import get_token
+from tests.admin.test_role import role_param
 from utils.yaml_handler import YamlHandler
 
-yamlhander_data = YamlHandler("E:/code/python/mall_tiny_test/data/admin/role_update_data.yaml")
-role_update_data = yamlhander_data.read_yaml()
+yamlhander_data = YamlHandler("E:/code/python/mall_tiny_test/data/admin/role_update.yaml")
+role_update_data = yamlhander_data.read_yaml()["data"]
+role_update_param=yamlhander_data.read_yaml()["param"]
 
 @allure.link("/admin/role/update")
 @allure.feature("admin:给用户分配角色")
@@ -29,9 +31,6 @@ def test_role_update_data(case, get_evn, get_root_token, get_token):
         assert r.json()["error"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
 
-
-yamlhander_param=YamlHandler("E:/code/python/mall_tiny_test/data/admin/role_update_param.yaml")
-role_update_param=yamlhander_param.read_yaml()
 
 @allure.link("/admin/role/update")
 @allure.feature("admin:给用户分配角色")

@@ -1,0 +1,96 @@
+data:
+   -
+      用例编号: id_data_0
+      用例标题: 格式正确
+      模块: admin
+      优先级: P2
+      前置条件: 登陆功能正常
+      预期结果:
+         code: 200
+         message: 操作成功
+         data:
+            id: 10
+            username: ceshi
+            password: $2a$10$RaaNo9CC0RSms8mc/gJpCuOWndDT4pHH0u5XgZdAAYFs1Uq4sOPRi
+            icon: null
+            email: ceshi@qq.com
+            nickName: ceshi
+            note: null
+            createTime: '2020-03-13T08:23:30.000+00:00'
+            loginTime: null
+            status: 1
+      请求方法: GET
+      URL: /admin/10
+      请求头:
+      请求体:
+   -
+      用例编号: id_data_1
+      用例标题: 查询的用户不存在
+      模块: admin
+      优先级: P2
+      前置条件: 登陆功能正常
+      预期结果:
+         code: 500
+         message: 查询的用户不存在
+         data: null
+      请求方法: GET
+      URL: /admin/100
+      请求头:
+      请求体:
+   -
+      用例编号: id_data_2
+      用例标题: 参数为空
+      模块: admin
+      优先级: P2
+      前置条件: 登陆功能正常
+      预期结果: Not Found
+      请求方法: GET
+      URL: /admin/
+      请求头:
+      请求体:
+   -
+      用例编号: id_data_3
+      用例标题: 没有相关权限
+      模块: admin
+      优先级: P2
+      前置条件: 登陆功能正常
+      预期结果:
+         code: 403
+         message: 没有相关权限
+         data: 抱歉，您没有访问权限
+      请求方法: GET
+      URL: /admin/10
+      请求头:
+      请求体:
+
+param:
+   - 用例编号: id_param_0
+     用例标题: 少参
+     模块: admin
+     优先级: P2
+     前置条件: 登陆功能正常
+     预期结果: Not Found
+     请求方法: GET
+     URL: /admin/
+     请求头:
+     请求体:
+   - 用例编号: id_param_1
+     用例标题: 错参
+     模块: admin
+     优先级: P2
+     前置条件: 登陆功能正常
+     预期结果: Bad Request
+     请求方法: GET
+     URL: /admin/abc
+     请求头:
+     请求体:
+   - 用例编号: id_param_2
+     用例标题: 多参
+     模块: admin
+     优先级: P2
+     前置条件: 登陆功能正常
+     预期结果: Not Found
+     请求方法: GET
+     URL: /admin/
+     请求头:
+     请求体:

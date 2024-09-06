@@ -3,16 +3,18 @@ import pytest
 from requests import request
 
 from conftest import get_token
+from tests.admin.test_login import yamlhandler
 from utils.yaml_handler import YamlHandler
 
-yamlhander_data = YamlHandler("E:/code/python/mall_tiny_test/data/admin/role_data.yaml")
-role_data = yamlhander_data.read_yaml()
+yamlhander = YamlHandler("E:/code/python/mall_tiny_test/data/admin/role.yaml")
+role_data = yamlhander.read_yaml()["data"]
+role_param = yamlhander.read_yaml()["param"]
+
 
 @allure.link("/admin/role")
 @allure.feature("admin:获取指定用户的角色")
 @pytest.mark.parametrize("case", role_data)
 def test_role_data(case, get_evn, get_root_token, get_token):
-
     host = get_evn["host"]
     path = case["URL"]
     method = case["请求方法"]
@@ -30,14 +32,10 @@ def test_role_data(case, get_evn, get_root_token, get_token):
     allure.dynamic.title(case["用例编号"])
 
 
-yamlhander_param=YamlHandler("E:/code/python/mall_tiny_test/data/admin/role_param.yaml")
-role_param=yamlhander_param.read_yaml()
-
 @allure.link("/admin/role")
 @allure.feature("admin:获取指定用户的角色")
 @pytest.mark.parametrize("case", role_param)
-def test_role_param(case,get_evn,get_token,get_root_token):
-
+def test_role_param(case, get_evn, get_token, get_root_token):
     host = get_evn["host"]
     path = case["URL"]
     method = case["请求方法"]

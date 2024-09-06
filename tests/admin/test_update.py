@@ -5,8 +5,9 @@ import requests
 from conftest import get_root_token
 from utils import yaml_handler
 
-yamlhandler_data = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/update_data.yaml")
-update_data = yamlhandler_data.read_yaml()
+yamlhandler = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/update.yaml")
+update_data = yamlhandler.read_yaml()["data"]
+update_param = yamlhandler.read_yaml()["param"]
 
 @allure.feature("admin:修改指定用户信息")
 @allure.link("/admin/update")
@@ -29,10 +30,6 @@ def test_update_date(case,get_evn,get_token,get_root_token):
     else:
         assert r.json()["error"] == case["预期结果"]
     allure.dynamic.title(case["用例编号"])
-
-
-yamlhandler_param = yaml_handler.YamlHandler("E:/code/python/mall_tiny_test/data/admin/update_param.yaml")
-update_param = yamlhandler_param.read_yaml()
 
 
 @allure.feature("admin:修改指定用户信息")
